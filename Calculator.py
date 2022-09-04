@@ -22,3 +22,22 @@ def isFloat(x):
         return(True)
     else:
         return(False)
+
+def isInt(x):
+    accepted_list = []
+    for i in range (0, 10):
+        i = str(i)
+        accepted_list.append(i)
+    x = list(x)
+    length = len(x)
+    count = 0
+    for i in range (0, length):
+        for j in range (0, 10):
+            if x[i] == accepted_list[j]:
+                count = count + 1
+            else:
+                toggle = True
+    if count == length:
+        return(True)
+    else:
+        return(False)
