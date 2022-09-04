@@ -78,3 +78,40 @@ def read_inv(list_1, format_1):
         print(None)
 
     return(None)
+
+principal = "None"
+while isFloat(principal) == False:
+    print("")
+    principal = input("Enter the principal amount.  ")
+principal = float(principal)
+
+deposit = "None"
+while isFloat(deposit) == False:
+    print("")
+    deposit = input("Enter the deposit amount.  ")
+deposit = float(deposit)
+
+interval = "None"
+while isInt(interval) == False:
+    print("")
+    interval = input("How many times per year will the deposit be made? Please enter an integer.  ")
+interval = int(interval)
+
+rate = "None"
+while isFloat(rate) == False:
+    print("")
+    rate = input("Enter the rate of growth in percent.  ")
+rate = float(rate)
+
+end = "None"
+while isInt(end) == False:
+    print("")
+    end = input("Enter the maturity length of this investment. Please enter an integer.  ")
+end = int(end)
+
+
+x = invest(principal, deposit, interval, rate, end)
+
+y = read_inv(x, "table")
+
+
