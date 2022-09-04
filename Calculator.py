@@ -41,3 +41,40 @@ def isInt(x):
         return(True)
     else:
         return(False)
+
+# principal is a
+# deposit is b
+# interval is c
+# rate is d
+# end is e
+
+def invest(a, b, c, d, e):
+    total = a
+    list_1 = []
+    for i in range (0, c * e + 1):
+        if i % c == 0:
+            year = int(i / c)
+            tuple_1 = (year, total)
+            list_1.append(tuple_1)
+        else:
+            toggle = True
+
+        additional = d * 0.01 / c * total + b
+        total = total + additional
+    return(list_1)
+        
+def read_inv(list_1, format_1):
+    if format_1 == "table":
+        length = len(list_1)
+        for i in range (0, length):
+            tuple_1 = list_1[i] 
+            year = tuple_1[0]
+            amount = tuple_1[1]
+            amount = amount * 100
+            amount = round(amount)
+            amount = amount / 100
+            print("Year %s -- %s" % (year, amount))
+    else:
+        print(None)
+
+    return(None)
